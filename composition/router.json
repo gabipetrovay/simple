@@ -1,0 +1,30 @@
+{
+    "module": "engine-ruut",
+    "name": "router",
+    "roles": {
+        "*": true
+    },
+    "config": {
+        "routes": [
+            "loadHome",
+            {
+                "contact": [
+                    "loadContact",
+                    {}
+                ]
+            }
+        ]
+    },
+    "flow": {
+        "loadHome": {
+            "d": [
+                [":home_page/render", { "tmpl": "layout" }]
+            ]
+        },
+        "loadContact": {
+            "d": [
+                [":contact_page/render", { "tmpl": "layout" }]
+            ]
+        }
+    }
+}

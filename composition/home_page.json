@@ -1,0 +1,19 @@
+{
+    "module": "view",
+    "name": "home_page",
+    "roles": {
+        "*": true
+    },
+    "config": {
+        "templates": {
+            "layout": {
+                "to": "._container",
+                "title": "My Home page",
+                "css": [],
+                "html": "/html/pages/home.html"
+            }
+        }
+    },
+    "flow": {
+    }
+}

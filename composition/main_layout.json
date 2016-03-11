@@ -1,0 +1,28 @@
+{
+    "module": "view",
+    "name": "main_layout",
+    "roles": {
+        "*": true
+    },
+    "config": {
+        "templates": {
+            "layout": {
+                "to": "body",
+                "title": "My Simple page",
+                "css": [],
+                "html": "/html/main_layout.html"
+            }
+        }
+    },
+    "flow": {
+        "ready": {
+            "d": [
+                [":render", { "tmpl": "layout" }],
+                [":nav/render", { "tmpl": "layout" }]
+            ]
+        }
+    },
+    "load": [
+        "router"
+    ]
+}

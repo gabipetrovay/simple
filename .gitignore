@@ -1,0 +1,15 @@
+/node_modules
+/modules
+/data/db
+log.txt
+*~
+*.swp
+*.swo
+.DS_Store
+engine_log.txt
+*.log
+instructions
+.service.json
+.sass-cache
+.bundles
+.flow-pack

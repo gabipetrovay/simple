@@ -1,0 +1,37 @@
+{
+    "module": "view",
+    "name": "nav",
+    "roles": {
+        "*": true
+    },
+    "config": {
+        "templates": {
+            "layout": {
+                "to": "._nav",
+                "html": "/html/nav.html",
+                "events": {
+                    "goToHome": [{
+                        "on": "click",
+                        "element": "home"
+                    }],
+                    "goToContact": [{
+                        "on": "click",
+                        "element": "contact"
+                    }]
+                }
+            }
+        }
+    },
+    "flow": {
+        "goToHome": {
+            "d": [
+                [":router/route", { "url": "/" }]
+            ]
+        },
+        "goToContact": {
+            "d": [
+                [":router/route", { "url": "/contact" }]
+            ]
+        }
+    }
+}

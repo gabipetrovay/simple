@@ -1,0 +1,34 @@
+{
+  "name": "simple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "./scripts/prestart.sh",
+    "start": "flow-app .",
+    "postinstall": "./scripts/postinstall.sh",
+    "local": "npm start --silent -- -c ssl/dev.crt -k ssl/dev.key",
+    "prelocal": "if [ ! -f ssl/dev.crt -o ! -f ssl/dev.key ]; then echo \"Generate the dev SSL certificates in the ssl directory ...\"; openssl req  -nodes -new -x509 -subj '/C=CH/ST=Zurich/L=Zurich/O=jillix GmbH/CN=jillix.com' -keyout ssl/dev.key -out ssl/dev.crt; fi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabipetrovay/simple.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabipetrovay/simple/issues"
+  },
+  "homepage": "https://github.com/gabipetrovay/simple#readme",
+  "dependencies": {
+    "engine-ruut": "github:jillix/engine-ruut",
+    "flow-app": "github:jillix/flow-app",
+    "flow-pack": "github:jillix/flow-pack",
+    "view": "github:adioo/view"
+  },
+  "entrypoints": {
+    "public": {
+        "*": "main_layout"
+    }
+  }
+}
